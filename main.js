@@ -1,11 +1,11 @@
 window.onload = getWeatherByIp();
 document.getElementById('city-input').focus();
 //http://api.weatherapi.com/v1/current.json?key=3700919ad4d4476284e191312210710&q=London&aqi=no por nome
-/* http://api.weatherapi.com/v1/ip.json?key=3700919ad4d4476284e191312210710&q=auto:ip&aqi=no por ip */
+/* https://ipgeolocation.abstractapi.com/v1/?api_key=c777bcc6e66d4ed8878342e3b4ba3427 */
 
 //onload, will the take weather info from the user location
 function getWeatherByIp(){
-    fetch("http://api.weatherapi.com/v1/ip.json?key=3700919ad4d4476284e191312210710&q=auto:ip&aqi=no")
+    fetch("https://ipgeolocation.abstractapi.com/v1/?api_key=c777bcc6e66d4ed8878342e3b4ba3427")
     .then(response => handleErrors(response))
     .then(data => getWeather(data.city))
 }
