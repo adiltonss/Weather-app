@@ -17,7 +17,7 @@ function handleErrors(response) {
 
 //will the take weather info through the input and the click
 function getWeather(city){
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=3700919ad4d4476284e191312210710&q=${city}&days=5&aqi=no&alerts=no`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=3700919ad4d4476284e191312210710&q=${city}&days=5&aqi=no&alerts=no`)
     .then(response => handleErrors(response))
     .then(obj => render(obj))
 }
