@@ -12,6 +12,19 @@ body{
     min-height: 100vh;
 }
 
+.changeBg{
+    animation: bg .5s linear;
+}
+
+@keyframes bg {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 4;
+    }
+}
+
 .intro-header, .input-group, .input-label, .aside-img, .cityName, .main-content, .next-days{
     width: 90%;
 }

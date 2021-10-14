@@ -107,9 +107,7 @@ window.onload = function(){
     document.getElementById('city-input').focus();
     let date = new Date();
     let hour = date.getHours();
-    let body = document.querySelector('body');
-    body.style.background = backgrounds[hour].bgColor;
-    console.log(hour);
+    changeBg(hour)
 }
 
 function createRequests(url, callback){
@@ -150,7 +148,7 @@ function render(weather){
     let apiDate = weather.location.localtime.split(' ');
     let currentDay = apiDate[0].split('-').reverse().join('/');
     let hourNow = apiDate[1];
-
+    changeBg(hourNow.split(":")[0]);
     cityName.innerHTML = `${weather.location.name} - ${weather.location.region} - ${weather.location.country}, ${hourNow} - ${currentDay}`
     currentTemp.innerHTML = 
     `
@@ -184,3 +182,13 @@ function render(weather){
         daysDisplay.appendChild(container);
     }
 }
+
+function changeBg(hourTime){
+    let body = document.querySelector('body');
+    body.style.background = backgrounds[hourTime].bgColor;      
+    body.classList += ' changeBg';
+}
+
+document.querySelector('body').addEventListener("animationend", ()=>{
+    document.querySelector('body').classList = '';
+})
