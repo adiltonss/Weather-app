@@ -2,12 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #fff;
 }
 
 body{
     font-family: "Fira Mono", Verdana, Geneva, Tahoma, sans-serif;
     background-image: url(images/Curve\ Line.svg);
-    background-color: #b1b1b1;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .intro-header, .input-group, .input-label, .aside-img, .cityName, .main-content, .next-days{
@@ -21,7 +23,6 @@ body{
 .intro-header h1{
     text-align: center;
     font-weight: bold;
-    color: #000;
 }
 .input-group{
     margin: auto;
@@ -32,12 +33,13 @@ body{
     display: block;
     font-weight: bold;
     margin: .5rem auto;
-    color: #000;
 }
 
 .aside-img{
     height: 150px;
     margin: auto;
+    border-radius: .75em;
+    color:#fff;
     background: url(images/undraw_Weather_re_qsmd.svg);
     background-position: center;
     background-size: 100% 100%;
@@ -51,8 +53,12 @@ main{
 
 .main-content, .next-days{
     width: 100%;
-    background-color: #686868;
-    color: #fff;
+    border-radius: .75em;
+    color:#fff;
+    background: #1c1c1c46;
+    border-top: 1px solid #ffffffbd;
+    border-left: 1px solid #ffffffbd;
+    box-shadow: 5px 5px 30px #00000064;
     padding: 20px;
     border-radius: 10px;
 }
